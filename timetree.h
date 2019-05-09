@@ -15,7 +15,6 @@ typedef union {
 } cb_data;
 
 class heap_timer
-
 {
 public:
     heap_timer(int delay)
@@ -99,7 +98,7 @@ public:
 
 private:
     map<time_t, heap_timer *> timer_manager;
-    
+
 };
 
 #endif

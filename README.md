@@ -4,8 +4,8 @@ This is a simple implementation of reactor which use epoll as the event multiple
 
 You can compile the code by using the following shell command:
 
->g++ -o reactor_server reactor_server_test.cc event_demultiplexer.cc reactor.cc global.cc
->g++ -o reactor_client reactor_client_test.cc event_demultiplexer.cc reactor.cc global.cc
+g++ -o reactor_server reactor_server_test.cpp event_demultiplexer.cpp reactor.cpp global.cpp
+g++ -o reactor_client reactor_client_test.cpp event_demultiplexer.cpp reactor.cpp global.cpp
 
 After that, two executable programs will be made.
 
@@ -13,3 +13,5 @@ You can use them in this way:
 
 >./reactor_server 127.0.0.1 6852
 >./reactor_client 127.0.0.1 6852
+
+![](http://ww1.sinaimg.cn/large/c1cfa19ely1g2vfbjxeohj219619maoh.jpg)
