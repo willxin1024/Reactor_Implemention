@@ -62,7 +62,7 @@ namespace reactor
 
     ///////////////////////////////////////////////////////////////////////////////
 
-    ReactorImplementation::ReactorImplementation()
+    ReactorImplementation::ReactorImplementation():m_eventtimer(NULL)
     {
         m_demultiplexer = new EpollDemultiplexer();
         m_eventtimer = new time_heap(INITSIZE);

@@ -9,7 +9,7 @@ using std::exception;
 #define BUFFER_SIZE 64
 
 class heap_timer;
-struct client_data
+struct cb_data
 {
     sockaddr_in address;
     int sockfd;
@@ -27,8 +27,8 @@ public:
 
 public:
     time_t expire;
-    void (*cb_func)(client_data *);
-    client_data *user_data;
+    void (*cb_func)(cb_data &);
+    cb_data* user_data;
 };
 
 class time_heap
@@ -155,7 +155,7 @@ public:
             }
             if (heap_head->cb_func)
             {
-                heap_head->cb_func(heap_head->user_data);
+                heap_head->cb_func(*heap_head->user_data);
             }
             pop_timer();
             heap_head = top();

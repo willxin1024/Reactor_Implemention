@@ -167,7 +167,7 @@ private:
     unsigned short m_port;
 };
 
-void printHelloworld(client_data *data)
+void printHelloworld(cb_data data)
 {
     fprintf(stderr, "timertask : Hello world from timerTask!\n");
 }
