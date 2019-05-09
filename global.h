@@ -4,7 +4,6 @@
 #include "reactor.h"
 #include "singleton.h"
 
-class reactor::Reactor;
 
 class Global : public Singleton<Global>
 {
